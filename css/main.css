@@ -9,6 +9,7 @@ html {
   }
 h1, h2, h3 {
     font-size: 30px;
+    text-align: center;
 }
   header {
     background: #2e5e55;
@@ -33,6 +34,7 @@ h1, h2, h3 {
     padding: 1rem;
     background: #2e5e55;
     color: #fff;
+    font-size: 30px;
 }
 
 .logo {
@@ -72,7 +74,15 @@ html, body {
     transform: translateX(100%);
     transition: transform 0.3s ease;
   }
-
+  .menu a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 18px;
+  }
+  
+  .menu a:hover {
+    color: #9ffcff;
+  }
   @media (max-width: 768px) {
     .menu {
 			flex-direction: column;
@@ -132,8 +142,9 @@ html, body {
 
 .index-paragraph {
     text-align: center;
-    background-color: rgba(146, 172, 172, 0.534);
+    background-color: rgba(46, 107, 107, 0.534);
     margin: auto;
+    font-size: 40px;
 }
 
 .about-content {
@@ -144,19 +155,30 @@ html, body {
     margin: 40px auto;
     padding: 20px;
     flex-wrap: wrap;
+    background-image: url(../img/sunflowers.jpeg);
+    background-size:contain
 }
 
 .about-img {
     width: 100%;
     max-width: 400px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 15px;
+    border-style: inset;
     flex-shrink: 0;
+    border-color: rgb(245, 205, 212);
 }
 
 .about-text {
     flex: 1;
     min-width: 250px;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -307,8 +329,66 @@ html, body {
     cursor: pointer;
   }
 
+/* contact stuff */
+
+.contact-section {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 1rem;
+    background-color: #27b8a4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1a9f8e;
+  }
+
   footer {
-    background: #27b8a4;
+    background: #2a867a;
     color: #fff;
     text-align: center;
   }
