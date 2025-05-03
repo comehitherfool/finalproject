@@ -7,7 +7,9 @@ html {
     font-weight: 400;
     font-style: normal;
   }
-
+h1, h2, h3 {
+    font-size: 30px;
+}
   header {
     background: #2e5e55;
     color: #fff;
@@ -144,14 +146,45 @@ html, body {
     flex-wrap: wrap;
 }
 
+.about-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      padding-top: 20px;
+    }
+  }
+
+.dog-img {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 1rem auto 0 auto;
+}
 
   .carousel-container {
     max-width: 800px;
     margin: 20px auto;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(146, 87, 151, 0.2);
   }
   
   .carousel {
@@ -193,8 +226,29 @@ html, body {
   .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
-  
 
+  .portfolio-button {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .btn {
+    background-color: #3d7567;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: "VT323", monospace;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #2a5c51;
+  }
+  
   footer {
     background: #27b8a4;
     color: #fff;
