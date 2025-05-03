@@ -41,13 +41,13 @@
       
       form.addEventListener('submit', (e) => {
 
-        // Form values
+  
         const name = form.querySelector('[name="name"]').value;
         const email = form.querySelector('[name="email"]').value;
         const message = form.querySelector('[name="message"]').value;
 
         if (name && email && message) {
-          form.reset(); // Reset form after submission
+          form.reset();
         } else {
           alert('Please fill out all fields.');
         }
