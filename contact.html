@@ -36,42 +36,6 @@
         menu.classList.toggle('expanded');
       });
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-    const imageContainer = document.querySelector('.carousel-images');
-    const images = document.querySelectorAll('.carousel-images img');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    
-    let currentIndex = 0;
-
-    function updateCarousel() {
-      const imageWidth = images[0].clientWidth;
-      imageContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-    }
-
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      updateCarousel();
-    }
-
-    function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      updateCarousel();
-    }
-
-    nextBtn.addEventListener('click', nextImage);
-    prevBtn.addEventListener('click', prevImage);
-
-    // Auto-advance every 5 seconds
-    setInterval(nextImage, 5000);
-
-    // Adjust carousel on window resize
-    window.addEventListener('resize', updateCarousel);
-
-    // Initial positioning
-    updateCarousel();
-  });
   </script>
 
 </head>
@@ -95,21 +59,9 @@
     </nav>
   </header>
 
-<div class="index-paragraph">
-  <p>My background is in 2D, and I'm working towards improving my 3D modeling skills.</p>
+<div>
+  
 </div>
-
-  <div class="carousel-container">
-    <div class="carousel">
-      <div class="carousel-images">
-        <img src="./img/AF_1.jpg" alt="Image 1">
-        <img src="./img/AF_2.jpg" alt="Image 2">
-        <img src="./img/AF_3.jpg" alt="Image 3">
-      </div>
-      <button class="carousel-btn prev">&#10094;</button>
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
-  </div>
 
   <footer>
     <p>&copy; 2025 Alyssa Dao</p>
